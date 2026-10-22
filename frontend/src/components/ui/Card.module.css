@@ -1,0 +1,134 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  min-width: 0;
+}
+.r_card {
+  border-radius: var(--r-card);
+}
+.r_section {
+  border-radius: var(--r-section);
+}
+.r_hero {
+  border-radius: var(--r-hero);
+}
+.pad_sm {
+  padding: 20px;
+}
+.pad_md {
+  padding: 24px 28px;
+}
+.pad_lg {
+  padding: 36px;
+}
+@media (max-width: 767px) {
+  .pad_md {
+    padding: 20px;
+  }
+  .pad_lg {
+    padding: 24px 20px;
+  }
+}
+
+.navy {
+  background: var(--navy-800);
+  border-color: var(--navy-800);
+  color: #fff;
+}
+.teal {
+  background: var(--teal-50);
+  border-color: var(--teal-200);
+}
+.muted {
+  background: var(--navy-50);
+  border-color: var(--navy-50);
+}
+.navyTint {
+  background: var(--navy-50);
+  border-color: var(--navy-100);
+}
+.dashed {
+  border-style: dashed;
+  border-color: var(--border-strong);
+}
+.warningDashed {
+  border-style: dashed;
+  border-color: var(--warning-dash);
+}
+.warning {
+  background: var(--warning-tint);
+  border-color: var(--warning-border);
+}
+.danger {
+  background: var(--danger-tint);
+  border-color: #f0c9cc;
+}
+.success {
+  background: var(--success-tint);
+  border-color: #c9e3d3;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.title_section {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.title_large {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.title_muted {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.navy .title_section,
+.navy .title_large {
+  color: #fff;
+}
+.subtitle {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-muted);
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tiles {
+  display: grid;
+}
+/* Phones: KPI tiles go two per row with smaller numbers (M-Dashboard). */
+@media (max-width: 767px) {
+  .tilesCompact {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+}

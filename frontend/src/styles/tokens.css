@@ -1,0 +1,73 @@
+/* qorgan design tokens — "Calm Finance" v1.0 (WCAG 2.2 AA). */
+:root {
+  /* Navy · primary */
+  --navy-900: #0d1a2b;
+  --navy-800: #14263d;
+  --navy-600: #2e4a6b;
+  --navy-500: #456285;
+  --navy-100: #e8eef5;
+  --navy-50: #f0f4f9;
+
+  /* Teal · AI */
+  --teal-800: #0a615e;
+  --teal-700: #0d7c78;
+  --teal-500: #149e9a;
+  --teal-300: #5fd3cd;
+  --teal-200: #cdeae8;
+  --teal-100: #e3f4f3;
+  --teal-50: #f0f9f8;
+
+  /* Neutrals */
+  --text: #202b37;
+  --text-secondary: #4f5b69;
+  --text-muted: #5f6b79;
+  --text-on-navy: #a7b6c8;
+  --border-input: #84909d;
+  --border-strong: #cbd3dd;
+  --border: #e2e7ee;
+  --divider: #eef1f5;
+  --surface: #ffffff;
+  --surface-muted: #f1f4f8;
+  --bg: #f7f9fc;
+
+  /* Status */
+  --success: #27815b;
+  --success-700: #1f6b4b;
+  --success-tint: #e7f3ec;
+  --warning: #ac7419;
+  --warning-700: #8a5c10;
+  --warning-tint: #fbf1de;
+  --warning-border: #f3dca8;
+  --warning-dash: #d9b36a;
+  --danger: #b53b45;
+  --danger-700: #9a2f39;
+  --danger-tint: #fbeaeb;
+  --neutral-tint: #eef1f5;
+
+  /* Charts */
+  --data-1: #3d6fb6;
+  --data-2: #149e9a;
+  --grid: #eef1f5;
+  --axis: #cbd3dd;
+
+  /* Type */
+  --font: Onest, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Radii */
+  --r-tag: 6px;
+  --r-control: 12px;
+  --r-card: 16px;
+  --r-section: 20px;
+  --r-hero: 24px;
+  --r-pill: 999px;
+
+  /* Elevation */
+  --e1: 0 1px 2px rgba(20, 38, 61, 0.12);
+  --e2: 0 8px 24px rgba(20, 38, 61, 0.1);
+  --e3: 0 24px 64px rgba(13, 26, 43, 0.24);
+
+  /* Layout */
+  --sidebar-w: 248px;
+  --rail-w: 72px;
+  --content-max: 1200px;
+}

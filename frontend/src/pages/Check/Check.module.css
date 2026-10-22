@@ -1,0 +1,671 @@
+/* ------------------------------------------------ page */
+.intro {
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--text-secondary);
+  max-width: 900px;
+}
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+}
+.side {
+  flex: 2 1 340px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.mobileOnly {
+  display: none;
+}
+.small {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-muted);
+}
+.small2 {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-secondary);
+}
+.bodySm {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-secondary);
+}
+.muted {
+  color: var(--text-muted);
+}
+.muted2 {
+  color: var(--text-secondary);
+}
+.negative {
+  color: var(--danger-700) !important;
+}
+.strongNavy {
+  color: var(--navy-800);
+}
+.text_danger {
+  color: var(--danger-700);
+}
+.text_warning {
+  color: var(--warning-700);
+}
+.text_success {
+  color: var(--success-700);
+}
+.selfStart {
+  align-self: flex-start;
+}
+
+/* ------------------------------------------------ form */
+.formCard {
+  flex: 3 1 560px;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-section);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.formHead {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.formTitle {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.formSubtitle {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-muted);
+}
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pairRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.downField {
+  flex: 1 1 220px;
+}
+.termField {
+  flex: 2 1 300px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.hintIcon {
+  flex: none;
+  margin-top: 1px;
+  color: var(--teal-700);
+}
+.optional {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+.resetLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 36px;
+  min-width: 36px;
+  padding: 0 4px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--teal-700);
+  font-size: 14px;
+  font-weight: 600;
+}
+.resetLink:hover {
+  color: var(--teal-800);
+  text-decoration: underline;
+}
+.submitArea {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+.submitRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.clearBtn {
+  padding: 0 22px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.saveError {
+  padding: 12px 14px;
+}
+.saveErrorText {
+  color: var(--text);
+}
+.inlineRetry {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--teal-700);
+  font-size: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ------------------------------------------------ calculating (System-States) */
+.calculating {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.calculatingCompact {
+  min-height: 260px;
+}
+.calcHead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  color: var(--navy-800);
+}
+.spinner {
+  flex: none;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.calcSteps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+}
+.calcSteps li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.calcSteps svg {
+  flex: none;
+}
+.stepDone {
+  color: var(--text);
+}
+.stepDone svg {
+  color: var(--success-700);
+}
+.stepActive {
+  color: var(--navy-800);
+  font-weight: 600;
+}
+.stepTodo {
+  color: var(--text-muted);
+}
+.stepTodo svg {
+  color: var(--border-strong);
+}
+.calcNote {
+  margin-top: auto;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ------------------------------------------------ «Твоя ситуация сейчас» */
+.sideCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-section);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.sideHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.sideTitle {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.facts {
+  display: flex;
+  flex-direction: column;
+}
+.facts > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--divider);
+  font-size: 15px;
+}
+.facts > div:last-child {
+  border-bottom: 0;
+}
+.facts dt {
+  color: var(--text-secondary);
+}
+.facts dd {
+  font-weight: 600;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.factStrong dt {
+  color: var(--text);
+  font-weight: 600;
+}
+.factStrong dd {
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.meter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.meterHead {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.meterHead span {
+  color: var(--text-secondary);
+}
+.meterHead b {
+  color: var(--navy-800);
+}
+.meterTrack {
+  position: relative;
+  height: 10px;
+  border-radius: var(--r-pill);
+}
+.track_danger {
+  background: var(--danger-tint);
+}
+.track_warning {
+  background: var(--warning-tint);
+}
+.track_success {
+  background: var(--success-tint);
+}
+.meterFill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: var(--r-pill);
+}
+.fill_danger {
+  background: var(--danger);
+}
+.fill_warning {
+  background: var(--warning);
+}
+.fill_success {
+  background: var(--success);
+}
+.meterTick {
+  position: absolute;
+  top: -3px;
+  width: 2px;
+  height: 16px;
+  background: #fff;
+}
+
+.missingCard {
+  border-color: var(--warning-border);
+}
+.missingList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.missingList li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--warning-border);
+  font-size: 14px;
+  line-height: 20px;
+}
+.missingList li > span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.missingList svg {
+  flex: none;
+}
+.missingList .missingDone {
+  border-color: transparent;
+  background: var(--bg);
+}
+.iconDone {
+  color: var(--success-700);
+}
+.iconMissing {
+  color: var(--warning-700);
+}
+
+/* ------------------------------------------------ «Предварительно» */
+.previewCard {
+  background: var(--navy-50);
+  border-radius: var(--r-section);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.previewTitle {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.previewBody {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: opacity 0.15s;
+}
+.stale {
+  opacity: 0.6;
+}
+.previewText {
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--text);
+}
+.previewFree {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--surface);
+  font-size: 14px;
+}
+
+/* ------------------------------------------------ AI help card */
+.aiCard {
+  background: var(--teal-50);
+  border: 1px solid var(--teal-200);
+  border-radius: var(--r-section);
+  padding: 20px 24px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.aiAvatar {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--teal-700);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aiCardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.aiCardTitle {
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 600;
+  color: var(--navy-800);
+}
+
+/* ------------------------------------------------ mobile summary (M-Check) */
+.summary {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-card);
+  padding: 4px 16px;
+}
+.summary summary {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  list-style: none;
+}
+.summary summary::-webkit-details-marker {
+  display: none;
+}
+.summaryChevron {
+  flex: none;
+  color: var(--text-secondary);
+  transition: transform 0.15s;
+}
+.summary[open] .summaryChevron {
+  transform: rotate(180deg);
+}
+.summary p {
+  margin: 0 0 12px;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-secondary);
+}
+.summaryMissing,
+.chipsMissing {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px 16px;
+  border-radius: var(--r-card);
+  background: var(--warning-tint);
+  border: 1px solid var(--warning-border);
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text);
+}
+.summaryMissing svg,
+.chipsMissing svg {
+  flex: none;
+  margin-top: 1px;
+  color: var(--warning-700);
+}
+.summaryMissing a,
+.chipsMissing a {
+  font-weight: 600;
+}
+
+/* ------------------------------------------------ Check-AI */
+.hideAi {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: var(--r-control);
+  background: var(--teal-100);
+  color: var(--teal-800);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.hideAi:hover {
+  background: var(--teal-200);
+  color: var(--teal-800);
+}
+.aiLayout {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  min-height: calc(100vh - 76px);
+}
+.aiMain {
+  flex: 999 1 520px;
+  min-width: 0;
+  padding: 28px 32px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.chipsRow {
+  list-style: none;
+  padding: 14px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-card);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.chipsRow b {
+  color: var(--text);
+  white-space: nowrap;
+}
+.chipLoad {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.chipLoad b {
+  color: inherit;
+}
+.compactCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-section);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.compactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 18px;
+  align-items: start;
+}
+.compactGrid label {
+  font-size: 14px;
+}
+.compactSubmit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+.compactSubmit p {
+  flex: 1 1 220px;
+}
+.compactSubmitBtn {
+  min-height: 54px;
+  padding: 0 26px;
+  font-size: 16px;
+}
+
+/* ------------------------------------------------ responsive */
+@media (max-width: 1279px) {
+  .aiMain {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .desktopOnly {
+    display: none;
+  }
+  .mobileOnly {
+    display: block;
+  }
+  .intro {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .formCard {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    gap: 20px;
+  }
+  .submitArea {
+    padding-top: 20px;
+  }
+  .submitRow > * {
+    width: 100%;
+  }
+  .previewCard {
+    border-radius: var(--r-card);
+    padding: 16px;
+    gap: 8px;
+  }
+  .previewTitle {
+    font-size: 15px;
+  }
+  .previewText {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .aiCard {
+    padding: 16px;
+    border-radius: var(--r-card);
+  }
+  .aiMain {
+    padding: 16px 16px 24px;
+    gap: 16px;
+  }
+  .compactCard {
+    padding: 20px 16px;
+  }
+  .compactSubmitBtn {
+    width: 100%;
+  }
+  .calculating {
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-section);
+  }
+  .compactCard .calculating {
+    padding: 0;
+    border: 0;
+  }
+}

@@ -1,0 +1,218 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.intro {
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--text-secondary);
+  max-width: 860px;
+}
+.note {
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-muted);
+}
+.baseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px 24px;
+}
+.baseGrid dt {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.baseGrid dd {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.priceField {
+  max-width: 280px;
+}
+
+/* weights */
+.weights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px 28px;
+}
+.weight {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  align-items: center;
+}
+.weightLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+.weightType {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.weightValue {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  min-width: 44px;
+  text-align: right;
+  color: var(--navy-800);
+}
+.range {
+  grid-column: 1 / -1;
+  width: 100%;
+  accent-color: var(--teal-700);
+}
+.weightsFoot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+}
+.sum {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.sumBad {
+  color: var(--danger-700);
+}
+
+/* tables */
+.tableWrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  min-width: 520px;
+}
+.table th,
+.table td {
+  padding: 8px 10px;
+  text-align: right;
+  border-bottom: 1px solid var(--divider);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.table th {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.table th[scope='row'],
+.table td:first-child {
+  text-align: left;
+  color: var(--navy-800);
+  font-weight: 600;
+}
+.unit {
+  display: block;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+.sub {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+.cell {
+  width: 84px;
+  padding: 6px 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  text-align: right;
+  font: inherit;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  background: var(--surface);
+}
+.cellBad {
+  border-color: var(--danger);
+  color: var(--danger-700);
+  background: var(--danger-tint);
+}
+.cell:focus {
+  outline: 2px solid var(--teal-500);
+  outline-offset: 1px;
+}
+.heat td {
+  text-align: center;
+  font-weight: 600;
+}
+.winner td,
+.winner th {
+  background: var(--teal-50);
+}
+.rankCell {
+  font-weight: 700;
+}
+
+/* results */
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.chartCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.chartTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+.stale {
+  opacity: 0.55;
+  transition: opacity 0.2s;
+}
+.details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--teal-700);
+}
+.details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 14px;
+}
+.why {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-secondary);
+}
+.ideal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.ideal b {
+  color: var(--navy-800);
+}

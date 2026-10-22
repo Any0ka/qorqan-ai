@@ -1,0 +1,244 @@
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* ------------------------------------------------ feed */
+.feed {
+  flex: 2 1 560px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tab {
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.tab:hover {
+  border-color: var(--border-input);
+}
+.tab[aria-selected='true'] {
+  border-color: var(--navy-800);
+  background: var(--navy-800);
+  color: #fff;
+  font-weight: 600;
+}
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.refreshing {
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.groupTitle {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+.tile {
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tile_warning {
+  background: var(--warning-tint);
+  color: var(--warning-700);
+}
+.tile_navy {
+  background: var(--navy-50);
+  color: var(--navy-800);
+}
+.tile_teal {
+  background: var(--teal-100);
+  color: var(--teal-800);
+}
+.tile_danger {
+  background: var(--danger-tint);
+  color: var(--danger-700);
+}
+.tile_success {
+  background: var(--success-tint);
+  color: var(--success-700);
+}
+.body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 600;
+  color: var(--text);
+}
+.titleUnread {
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--danger);
+}
+.time {
+  font-size: 13px;
+  line-height: 23px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.text {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-secondary);
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+.action.action {
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.done {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--success-700);
+}
+
+/* ------------------------------------------------ settings */
+.settings {
+  flex: 1 1 300px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-section);
+}
+.settingsTitle {
+  margin-bottom: 8px;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.settingsSkeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.switches {
+  display: flex;
+  flex-direction: column;
+}
+.switches > label:not(:last-child) {
+  border-bottom: 1px solid var(--divider);
+}
+.where {
+  margin: 14px 0 4px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.hint {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--warning-700);
+}
+.noAds {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 767px) {
+  .item {
+    gap: 12px;
+    padding: 16px;
+  }
+  .tile {
+    width: 38px;
+    height: 38px;
+  }
+  .settings {
+    padding: 20px;
+  }
+  .tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+  .tab {
+    flex: none;
+  }
+}

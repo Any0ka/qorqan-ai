@@ -1,0 +1,487 @@
+/* shared */
+.pad28 {
+  padding: 28px;
+}
+.pad24 {
+  padding: 24px 28px;
+}
+.mutedTitle {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.sectionTitle {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.hint {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-muted);
+}
+.cardHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+.cardTop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.pushDown {
+  margin-top: auto;
+}
+.smallBtn {
+  min-height: 44px;
+  padding: 0 14px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+/* progress */
+.progressCard {
+  gap: 20px;
+}
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+}
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.metricLabel {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-secondary);
+}
+.metricValue {
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--navy-800);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.metricNote {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-muted);
+}
+.lp {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.lpTrack {
+  position: relative;
+  height: 12px;
+  border-radius: var(--r-pill);
+  background: var(--neutral-tint);
+}
+.lpZone {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 999px 0 0 999px;
+  background: var(--success-tint);
+}
+.lpOver {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 4px 4px 0;
+  background: var(--danger);
+}
+.lpOverWarn {
+  background: var(--warning);
+}
+.lpFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: var(--r-pill);
+  background: var(--success);
+}
+.lpTick {
+  position: absolute;
+  top: -4px;
+  width: 2px;
+  height: 20px;
+  background: var(--success-700);
+}
+.lpLabels {
+  position: relative;
+  height: 18px;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-secondary);
+}
+.lpLabels span {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+.lpTargetLabel {
+  color: var(--success-700);
+  font-weight: 600;
+}
+.lpStacked {
+  height: 36px;
+}
+.lpStacked .lpNowLabel {
+  top: 18px;
+}
+.explain {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--bg);
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text);
+}
+
+/* next step */
+.nextEyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--teal-300);
+}
+.nextTitle {
+  font-size: 21px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #fff;
+}
+.nextAmount {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.nextWhen {
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--text-on-navy);
+}
+
+/* forecast */
+.fcCard {
+  gap: 14px;
+}
+
+/* priorities */
+.prioCard {
+  gap: 6px;
+}
+.prioSubtitle {
+  margin-bottom: 8px;
+}
+.prio {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.prio li {
+  display: flex;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--divider);
+}
+.prio li:last-child {
+  border-bottom: 0;
+}
+.rank {
+  flex: none;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 4px;
+  border-radius: var(--r-pill);
+  background: var(--navy-100);
+  color: var(--navy-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.rankOn {
+  background: var(--navy-800);
+  color: #fff;
+}
+.rankRange {
+  font-size: 13px;
+}
+.prioBody {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.prioHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+.prioHead b {
+  font-size: 15px;
+  line-height: 22px;
+}
+.prioDate {
+  font-size: 13px;
+  line-height: 22px;
+  color: var(--text-secondary);
+}
+.dateWarn {
+  color: var(--warning-700);
+  font-weight: 600;
+}
+.dateStrong {
+  font-weight: 600;
+}
+.prioText {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-secondary);
+}
+
+/* goals */
+.goalsCard {
+  gap: 14px;
+}
+.goals {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.goal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+.goalScenario {
+  padding: 13px 15px;
+  border: 2px solid var(--teal-500);
+  background: var(--teal-50);
+}
+.goalPlanned {
+  border-style: dashed;
+  border-color: var(--border-strong);
+}
+.goalHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 12px;
+}
+.goalHead b {
+  font-size: 15px;
+  line-height: 22px;
+}
+.goalPlanned .goalHead b {
+  color: var(--text-secondary);
+}
+.goalMeta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.goalDate {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-secondary);
+}
+.goalScenario .goalDate {
+  color: var(--teal-800);
+  font-weight: 600;
+}
+.goalPlanned .goalDate,
+.goalPlanned .goalNote {
+  color: var(--text-muted);
+}
+.goalNote {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-secondary);
+}
+.remove {
+  display: inline-flex;
+  margin: -10px -12px -10px 0;
+}
+
+/* add goal dialog */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.optional {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* recommendations */
+.recoCard {
+  gap: 14px;
+}
+.aiHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.aiBadge {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--teal-700);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recoList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 14px;
+}
+.reco {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 16px;
+  background: var(--bg);
+}
+.reco b {
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--text);
+}
+.recoText {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-secondary);
+}
+.recoDismissed {
+  opacity: 0.6;
+}
+.recoActions {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dismissBtn {
+  color: var(--text-secondary);
+}
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.status_success {
+  background: var(--success-tint);
+  color: var(--success-700);
+}
+.status_teal {
+  background: var(--teal-100);
+  color: var(--teal-800);
+}
+.status_neutral {
+  background: var(--neutral-tint);
+  color: var(--text-secondary);
+}
+
+/* empty plan */
+.empty {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px 24px;
+}
+.emptyIcon {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--navy-100);
+  color: var(--navy-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emptyBody {
+  flex: 1 1 320px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.emptyTitle {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--navy-800);
+  text-wrap: balance;
+}
+.emptyText {
+  max-width: 600px;
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--text-secondary);
+}
+.emptyActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+@media (max-width: 767px) {
+  .pad28,
+  .pad24 {
+    padding: 20px;
+  }
+  .metricValue {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  .lpLabels {
+    height: 36px;
+  }
+  .lpLabels .lpNowLabel {
+    top: 18px;
+  }
+}

@@ -1,0 +1,248 @@
+/* LoadScale */
+.loadScale {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.track {
+  position: relative;
+  height: 12px;
+  border-radius: var(--r-pill);
+}
+.track_danger {
+  background: var(--danger-tint);
+}
+.track_warning {
+  background: var(--warning-tint);
+}
+.track_success {
+  background: var(--success-tint);
+}
+.fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: var(--r-pill);
+}
+.fill_danger {
+  background: var(--danger);
+}
+.fill_warning {
+  background: var(--warning);
+}
+.fill_success {
+  background: var(--success);
+}
+.tick {
+  position: absolute;
+  top: -3px;
+  width: 2px;
+  height: 18px;
+  background: #fff;
+}
+.legend {
+  display: grid;
+  grid-template-columns: 30fr 15fr 55fr;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text-muted);
+}
+.legendShort {
+  display: none;
+}
+@media (max-width: 767px) {
+  .legendWide {
+    display: none;
+  }
+  .legendShort {
+    display: grid;
+    font-size: 11px;
+  }
+}
+
+/* RiskScale */
+.riskScale {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 520px;
+}
+.segments,
+.segmentLabels {
+  display: flex;
+  gap: 4px;
+}
+.segment {
+  flex: 1 1 0;
+  height: 10px;
+}
+.segment:first-child {
+  border-radius: 999px 0 0 999px;
+}
+.segment:last-child {
+  border-radius: 0 999px 999px 0;
+}
+.seg_low {
+  background: var(--success-tint);
+}
+.seg_medium {
+  background: var(--warning-tint);
+}
+.seg_high {
+  background: var(--danger-tint);
+}
+.seg_low.segActive {
+  background: var(--success);
+}
+.seg_medium.segActive {
+  background: var(--warning);
+}
+.seg_high.segActive {
+  background: var(--danger);
+}
+.segmentLabels {
+  font-size: 13px;
+  line-height: 18px;
+}
+.segmentLabels span {
+  flex: 1 1 0;
+  color: var(--text-muted);
+}
+.segmentLabels .label_low {
+  color: var(--success-700);
+  font-weight: 700;
+}
+.segmentLabels .label_medium {
+  color: var(--warning-700);
+  font-weight: 700;
+}
+.segmentLabels .label_high {
+  color: var(--danger-700);
+  font-weight: 700;
+}
+
+/* CompareBars */
+.compare {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.compareTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+.compareRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+.compareLabel {
+  flex: none;
+  width: 52px;
+  color: var(--text-secondary);
+}
+.compareTrack {
+  position: relative;
+  flex: 1 1 auto;
+  height: 12px;
+  border-radius: var(--r-pill);
+  background: var(--neutral-tint);
+}
+.compareFill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 0 4px 4px 0;
+}
+.cf_neutral {
+  background: var(--navy-500);
+}
+.cf_danger {
+  background: var(--danger);
+}
+.cf_warning {
+  background: var(--warning);
+}
+.cf_success {
+  background: var(--success);
+}
+.compareTick {
+  position: absolute;
+  top: -4px;
+  width: 2px;
+  height: 20px;
+  background: var(--text);
+}
+.compareValue {
+  flex: none;
+  min-width: 40px;
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.cv_danger {
+  color: var(--danger-700);
+}
+.cv_warning {
+  color: var(--warning-700);
+}
+.cv_success {
+  color: var(--success-700);
+}
+.compareAxis {
+  position: relative;
+  flex: 1 1 auto;
+  height: 16px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.compareAxis span {
+  position: absolute;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+/* Segments */
+.segRow {
+  display: flex;
+  gap: 4px;
+}
+.segItem {
+  flex: 1 1 0;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--border);
+}
+.segOn_navy {
+  background: var(--navy-800);
+}
+.segOn_success {
+  background: var(--success);
+}
+.segOn_teal {
+  background: var(--teal-500);
+}
+
+/* ProgressBar */
+.progress {
+  height: 8px;
+  border-radius: var(--r-pill);
+  background: var(--neutral-tint);
+  overflow: hidden;
+}
+.progressFill {
+  height: 100%;
+  border-radius: var(--r-pill);
+}
+.pf_navy {
+  background: var(--navy-800);
+}
+.pf_teal {
+  background: var(--teal-500);
+}
+.pf_success {
+  background: var(--success);
+}
+.pf_warning {
+  background: var(--warning);
+}

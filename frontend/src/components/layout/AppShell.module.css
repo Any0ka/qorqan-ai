@@ -1,0 +1,440 @@
+/* Breakpoints (design system): desktop ≥1280 · tablet 768–1279 · mobile <768 */
+
+.shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  background: var(--bg);
+}
+.skip {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 200;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--navy-800);
+  color: #fff;
+  font-weight: 600;
+}
+.skip:focus {
+  top: 12px;
+  color: #fff;
+}
+
+/* ------------------------------------------------ sidebar (desktop) */
+.sidebar {
+  position: sticky;
+  top: 0;
+  flex: none;
+  width: var(--sidebar-w);
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.railLogo {
+  display: none;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: left;
+}
+.navItem:hover {
+  background: var(--bg);
+  color: var(--navy-800);
+}
+.navItem[aria-current='page'] {
+  background: var(--navy-100);
+  color: var(--navy-800);
+  font-weight: 600;
+}
+.navIcon {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aiIcon {
+  color: var(--teal-700);
+}
+.navItem {
+  position: relative;
+}
+.navDot {
+  margin-left: auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--warning);
+}
+.navShort {
+  display: none;
+}
+.sideFooter {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+.sideFooter .navItem {
+  font-size: 14px;
+}
+
+.column {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------------------------------------ page header */
+.pageHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  padding: 20px 40px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.titleBlock {
+  flex: 1 1 320px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.pageTitle {
+  font-size: 26px;
+  line-height: 34px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--navy-800);
+}
+.pageSubtitle {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-muted);
+}
+.pageSubtitle svg {
+  flex: none;
+  margin-top: 2px;
+}
+.pageSubtitle a {
+  font-weight: 600;
+}
+.subtitleWarning {
+  color: var(--warning-700);
+  font-weight: 600;
+}
+.headerControls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.desktopOnly {
+  display: contents;
+}
+
+.bell {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy-800);
+}
+.bell:hover {
+  color: var(--navy-800);
+  border-color: var(--border-strong);
+}
+.bellPlain {
+  border-color: transparent;
+}
+.bellDot {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--danger);
+  box-shadow: 0 0 0 2px #fff;
+}
+.userChip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 3px 12px 3px 3px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+}
+.userChip:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+.avatar {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+.userName {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.main {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 32px 40px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.bare {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------------------------------------ mobile chrome (hidden on desktop) */
+.mobileBar,
+.bottomNav {
+  display: none;
+}
+
+/* ------------------------------------------------ desktop S */
+@media (max-width: 1439px) {
+  .main {
+    padding: 28px 32px 48px;
+  }
+  .pageHeader {
+    padding: 18px 32px;
+  }
+}
+
+/* ------------------------------------------------ tablet: 72px rail with icons + labels */
+@media (max-width: 1279px) {
+  .sidebar {
+    width: var(--rail-w);
+    padding: 16px 0;
+    align-items: center;
+    gap: 20px;
+  }
+  .sidebar > a:first-child {
+    display: none;
+  }
+  .railLogo {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav {
+    align-items: center;
+  }
+  .navItem {
+    width: 66px;
+    min-height: 58px;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    font-size: 11px;
+    text-align: center;
+  }
+  .navItem[aria-current='page'] {
+    background: transparent;
+    font-weight: 700;
+  }
+  .navItem:hover {
+    background: transparent;
+  }
+  .navIcon {
+    width: 48px;
+    height: 30px;
+    border-radius: var(--r-pill);
+  }
+  .navItem[aria-current='page'] .navIcon {
+    background: var(--navy-100);
+  }
+  .navLabel {
+    display: none;
+  }
+  .navShort {
+    display: block;
+  }
+  .navDot {
+    position: absolute;
+    top: 6px;
+    right: 12px;
+  }
+  .sideFooter {
+    align-items: center;
+    padding-top: 12px;
+  }
+  .sideFooter .navItem {
+    width: 48px;
+    min-height: 48px;
+  }
+  .main {
+    padding: 24px 24px 48px;
+  }
+  .pageHeader {
+    padding: 18px 24px;
+  }
+}
+
+/* ------------------------------------------------ mobile: top bar + bottom navigation */
+@media (max-width: 767px) {
+  .shell {
+    flex-direction: column;
+  }
+  .sidebar {
+    display: none;
+  }
+  .mobileBar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 6px 8px 6px 8px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+  .mobileActions {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  .mobileAvatar {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  .mobileAvatar .avatar {
+    font-size: 13px;
+  }
+  .desktopOnly {
+    display: none;
+  }
+  .pageHeader {
+    padding: 16px 16px 4px;
+    background: transparent;
+    border-bottom: 0;
+  }
+  .titleBlock {
+    flex-basis: 100%;
+  }
+  .pageTitle {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .headerControls:empty {
+    display: none;
+  }
+  .main {
+    padding: 12px 16px 96px;
+    gap: 16px;
+  }
+  .bare {
+    padding-bottom: 80px;
+  }
+  .bottomNav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding: 6px 6px calc(10px + env(safe-area-inset-bottom));
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+  }
+  .bottomItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    min-height: 56px;
+    font-size: 11px;
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+  .bottomItem:hover {
+    color: var(--navy-800);
+  }
+  .bottomItem[aria-current='page'] {
+    font-weight: 700;
+    color: var(--navy-800);
+  }
+  .bottomIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bottomCheck {
+    font-weight: 600;
+    color: var(--navy-800);
+  }
+  .bottomCheck .bottomIcon {
+    width: 46px;
+    height: 32px;
+    border-radius: 10px;
+    background: var(--navy-800);
+    color: #fff;
+  }
+}

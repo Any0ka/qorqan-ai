@@ -1,0 +1,504 @@
+/* shared blocks */
+.section {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-hero);
+}
+.headStack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.h2 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.h2Lg {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--navy-800);
+  text-wrap: balance;
+}
+.lead {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-muted);
+}
+.eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--teal-700);
+}
+.footnote {
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-muted);
+}
+.pushDown {
+  margin-top: auto;
+}
+
+/* goal bar */
+.goalBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  padding: 18px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+.goalInfo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  flex: 1 1 320px;
+}
+.goalIcon {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--navy-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy-800);
+}
+.goalText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.goalTitle {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.goalSub {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-secondary);
+}
+.riskWord {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+.risk_high {
+  color: var(--danger-700);
+}
+.risk_medium {
+  color: var(--warning-700);
+}
+.risk_low {
+  color: var(--success-700);
+}
+.risk_insufficient {
+  color: var(--text-secondary);
+}
+
+/* comparison table */
+.tableHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+.tableWrap {
+  overflow-x: auto;
+}
+.table {
+  width: 100%;
+  min-width: 860px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+.table thead th {
+  text-align: left;
+  vertical-align: bottom;
+  padding: 0 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.corner {
+  width: 180px;
+  padding: 0 12px 16px 0;
+}
+.colTitle {
+  display: block;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.colDesc {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+.table tbody th {
+  text-align: left;
+  padding: 14px 12px 14px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--divider);
+}
+.table tbody td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--divider);
+}
+.table tbody tr.lastRow th,
+.table tbody tr.lastRow td {
+  border-bottom: 0;
+}
+.table tbody tr.actionsRow td {
+  padding: 16px 12px 0;
+  border-bottom: 0;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.sub {
+  display: block;
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+.bad {
+  color: var(--danger-700);
+  font-weight: 600;
+}
+
+.table .recHead {
+  padding: 16px 14px;
+  background: var(--teal-50);
+  border: 2px solid var(--teal-500);
+  border-bottom: 1px solid var(--teal-200);
+  border-radius: 16px 16px 0 0;
+}
+.recHead .colDesc {
+  color: var(--text-secondary);
+}
+.table tbody td.rec {
+  padding: 14px;
+  background: var(--teal-50);
+  border-left: 2px solid var(--teal-500);
+  border-right: 2px solid var(--teal-500);
+  border-bottom-color: var(--teal-200);
+  font-weight: 600;
+}
+.table tbody tr.lastRow td.rec {
+  border-bottom: 0;
+}
+.table tbody tr.actionsRow td.rec {
+  padding: 14px 14px 16px;
+  border: 2px solid var(--teal-500);
+  border-top: 0;
+  border-radius: 0 0 16px 16px;
+}
+.recBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+  padding: 3px 9px 3px 7px;
+  border-radius: var(--r-pill);
+  background: var(--teal-700);
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+}
+.tableBtn {
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+/* mobile option cards */
+.cards {
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  gap: 12px;
+}
+.optCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-card);
+}
+.optCardRec {
+  padding: 15px;
+  border: 2px solid var(--teal-500);
+  background: var(--teal-50);
+}
+.optCardRec .recBadge {
+  align-self: flex-start;
+  margin-bottom: 0;
+}
+.optHead {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.optList {
+  display: flex;
+  flex-direction: column;
+  font-variant-numeric: tabular-nums;
+}
+.optList > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--divider);
+  font-size: 14px;
+}
+.optCardRec .optList > div {
+  border-bottom-color: var(--teal-200);
+}
+.optList > div:last-child {
+  border-bottom: 0;
+}
+.optList dt {
+  color: var(--text-secondary);
+}
+.optList dd {
+  text-align: right;
+}
+.optList dd .sub {
+  display: inline;
+}
+
+/* details dialog */
+.dialogBody {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.bodyText {
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--text-secondary);
+}
+
+/* builder */
+.lower {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+}
+.builder {
+  flex: 3 1 520px;
+  gap: 20px;
+}
+.builderGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr));
+  gap: 16px;
+}
+.builderField {
+  gap: 8px;
+}
+.builderField label {
+  font-size: 14px;
+}
+.builderField select {
+  min-height: 48px;
+  padding-left: 12px;
+  font-size: 15px;
+}
+.builderField select:disabled {
+  background: var(--surface-muted);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+.resultHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.resultTitle {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+.resultStatus {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pending {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.resultList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  gap: 12px;
+}
+.resultList > div {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.resultList dt {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-muted);
+}
+.resultList dd {
+  margin-top: 4px;
+  font-size: 19px;
+  line-height: 26px;
+  font-weight: 700;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+.resultList dd.bad {
+  color: var(--danger-700);
+}
+.advice {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-secondary);
+}
+.stale {
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+
+/* recommended path */
+.path {
+  flex: 2 1 340px;
+}
+.timeline {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.step {
+  display: flex;
+  gap: 14px;
+}
+.stepRail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stepDot,
+.stepDotFinal {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+.stepDot {
+  background: var(--navy-800);
+}
+.stepDotFinal {
+  background: var(--teal-700);
+}
+.stepLine {
+  flex: 1 1 auto;
+  width: 2px;
+  min-height: 24px;
+  background: var(--border);
+}
+.stepBody {
+  min-width: 0;
+  padding-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.step:last-child .stepBody {
+  padding-bottom: 0;
+}
+.stepWhen {
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.stepTitle {
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 600;
+  color: var(--text);
+}
+.stepText {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-secondary);
+}
+.pathBtn {
+  min-height: 48px;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 20px;
+    border-radius: var(--r-section);
+  }
+  .goalBar {
+    padding: 16px;
+  }
+  .tableWrap {
+    display: none;
+  }
+  .cards {
+    display: flex;
+  }
+  .result {
+    padding: 16px;
+  }
+}

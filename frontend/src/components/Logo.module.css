@@ -1,0 +1,29 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 8px;
+  text-decoration: none;
+  color: var(--navy-800);
+}
+.logo:hover {
+  color: var(--navy-800);
+}
+.inverted,
+.inverted:hover {
+  color: #ffffff;
+}
+.word {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+.sm .word {
+  font-size: 21px;
+}
+.md .word {
+  font-size: 23px;
+}
+.lg .word {
+  font-size: 26px;
+}

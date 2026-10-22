@@ -1,0 +1,33 @@
+.group {
+  display: inline-flex;
+  padding: 3px;
+  gap: 2px;
+  background: var(--surface-muted);
+  border-radius: var(--r-control);
+}
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 38px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+.option[aria-pressed='true'] {
+  background: var(--surface);
+  box-shadow: var(--e1);
+  font-weight: 600;
+  color: var(--navy-800);
+}
+.compact .option {
+  min-width: 44px;
+  min-height: 36px;
+  padding: 0 8px;
+  font-size: 13px;
+}

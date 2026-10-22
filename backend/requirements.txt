@@ -1,0 +1,13 @@
+fastapi[standard]>=0.115
+pydantic>=2.7
+PyJWT>=2.8
+python-multipart>=0.0.9
+
+# dev / tests
+pytest>=8
+httpx>=0.27
+
+# TODO: Database — add the driver/ORM when persistence is implemented, e.g.
+#   sqlalchemy>=2.0
+#   alembic>=1.13
+#   psycopg[binary]>=3.1
